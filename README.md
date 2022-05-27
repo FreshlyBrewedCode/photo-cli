@@ -131,6 +131,73 @@ photo import canon
 
 # Commands
 <!-- commands -->
+* [`photo config`](#photo-config)
+* [`photo help [COMMAND]`](#photo-help-command)
+* [`photo import [PRESET]`](#photo-import-preset)
+
+## `photo config`
+
+Edit the photo-cli config.
+
+```
+USAGE
+  $ photo config
+
+DESCRIPTION
+  Edit the photo-cli config.
+```
+
+_See code: [dist/commands/config.ts](https://github.com/FreshlyBrewedCode/photo-cli/blob/v1.0.0/dist/commands/config.ts)_
+
+## `photo help [COMMAND]`
+
+Display help for photo.
+
+```
+USAGE
+  $ photo help [COMMAND] [-n]
+
+ARGUMENTS
+  COMMAND  Command to show help for.
+
+FLAGS
+  -n, --nested-commands  Include all nested commands in the output.
+
+DESCRIPTION
+  Display help for photo.
+```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.10/src/commands/help.ts)_
+
+## `photo import [PRESET]`
+
+Imports files from the input directory to the output directory using a path template.
+
+```
+USAGE
+  $ photo import [PRESET] [-i <value>] [-o <value>] [-t <value>] [-P <value>] [-p <value>] [-c] [-m] [-f]
+    [-v]
+
+FLAGS
+  -P, --preset=<value>    name of the import preset
+  -c, --confirm           performs the import without additional user confirmation
+  -f, --force             overwrite existing files in output directory
+  -i, --input=<value>     input path
+  -m, --move              move files instead of copy
+  -o, --output=<value>    output path
+  -p, --project=<value>   the project name of the import
+  -t, --template=<value>  name of the template config
+  -v, --verbose
+
+DESCRIPTION
+  Imports files from the input directory to the output directory using a path template.
+
+EXAMPLES
+  $ photo import
+```
+
+_See code: [dist/commands/import.ts](https://github.com/FreshlyBrewedCode/photo-cli/blob/v1.0.0/dist/commands/import.ts)_
+<!-- commandsstop -->
 - [Photo CLI](#photo-cli)
 - [Installation](#installation)
 - [Usage](#usage)
