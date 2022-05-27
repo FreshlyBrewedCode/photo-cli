@@ -1,0 +1,84 @@
+{
+  "name": "photo-cli",
+  "version": "0.0.0",
+  "description": "A cli for importing and manageing photos.",
+  "author": "FreshlyBrewedCode",
+  "bin": {
+    "photo": "./bin/run"
+  },
+  "homepage": "https://github.com/FreshlyBrewedCode/photo-cli",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": "FreshlyBrewedCode/photo-cli",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "dependencies": {
+    "@oclif/core": "^1.9",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^2.0.1",
+    "@types/cli-progress": "^3.11.0",
+    "@types/fs-extra": "^9.0.13",
+    "@types/listr": "^0.14.4",
+    "@types/mustache": "^4.1.2",
+    "chalk": "^4",
+    "date-fns": "^2.28.0",
+    "dist-exiftool": "^10.53.0",
+    "exif": "^0.6.0",
+    "fs-extra": "^10.1.0",
+    "glob": "^8.0.3",
+    "listr": "^0.14.3",
+    "mustache": "^4.2.0",
+    "node-exiftool": "^2.3.0",
+    "yaml": "^2.1.0"
+  },
+  "devDependencies": {
+    "@oclif/test": "^2",
+    "@types/chai": "^4",
+    "@types/exif": "^0.6.3",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.9.4",
+    "chai": "^4",
+    "eslint": "^7.32.0",
+    "eslint-config-oclif": "^4",
+    "eslint-config-oclif-typescript": "^1.0.2",
+    "globby": "^11",
+    "mocha": "^9",
+    "oclif": "^3",
+    "shx": "^0.3.3",
+    "ts-node": "^10.2.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.3"
+  },
+  "oclif": {
+    "bin": "photo",
+    "dirname": "photo",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help"
+    ],
+    "topicSeparator": " ",
+    "topics": {}
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts --config .eslintrc",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "yarn lint",
+    "prepack": "yarn build && oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": "https://github.com/FreshlyBrewedCode/photo-cli/issues",
+  "keywords": [
+    "oclif"
+  ],
+  "types": "dist/index.d.ts"
+}
