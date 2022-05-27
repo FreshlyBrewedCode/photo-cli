@@ -1,7 +1,7 @@
 {
   "name": "photo-cli",
   "version": "0.0.0",
-  "description": "A cli for importing and manageing photos.",
+  "description": "A cli for importing and managing photos.",
   "author": "FreshlyBrewedCode",
   "bin": {
     "photo": "./bin/run"
