@@ -51,8 +51,8 @@
     "oclif": "^3",
     "shx": "^0.3.3",
     "ts-node": "^10.2.1",
-    "tslib": "^2.4.0",
-    "typescript": "^4.4.3"
+    "typescript": "^4.7.2",
+    "tslib": "^2.4.0"
   },
   "oclif": {
     "bin": "photo",
