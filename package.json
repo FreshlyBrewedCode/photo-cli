@@ -25,7 +25,7 @@
     "@types/listr": "^0.14.4",
     "@types/mustache": "^4.1.2",
     "chalk": "^4",
-    "date-fns": "^2.28.0",
+    "date-fns": "^2.29.2",
     "dist-exiftool": "^10.53.0",
     "exif": "^0.6.0",
     "fs-extra": "^10.1.0",
