@@ -33,7 +33,7 @@
     "listr": "^0.14.3",
     "mustache": "^4.2.0",
     "node-exiftool": "^2.3.0",
-    "yaml": "^2.1.0"
+    "yaml": "^2.1.3"
   },
   "devDependencies": {
     "@oclif/test": "^2",
